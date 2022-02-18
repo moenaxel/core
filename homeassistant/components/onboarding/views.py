@@ -196,7 +196,7 @@ class CoreConfigOnboardingView(_BaseOnboardingView):
             from homeassistant.components import hassio
 
             if (
-                hassio.is_hassio(hass)
+                hassio.is_hassio()
                 and "raspberrypi" in hassio.get_core_info(hass)["machine"]
             ):
                 await hass.config_entries.flow.async_init(
